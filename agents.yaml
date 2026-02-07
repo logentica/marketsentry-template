@@ -1,0 +1,8 @@
+# Simple Template - AI Agent Configuration
+# Optional: Enable developer agent for this site
+
+agents:
+  developer:
+    enabled: false
+    image: registry.buildville.cloud/library/developer:latest
+    workspaceSize: 5Gi

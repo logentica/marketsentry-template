@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Simple Site - Fast & Beautiful Websites">
+  <!-- Hero Section -->
+  <section class="py-20 lg:py-32 bg-gradient-to-br from-primary-50 to-white">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-gray-900 mb-6">
+          Build <span class="text-primary-600">Beautiful</span> Websites Fast
+        </h1>
+        <p class="text-xl text-gray-600 mb-10">
+          A simple, lightweight template for creating stunning websites without the complexity. 
+          No databases, no authentication - just pure, fast content.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#features" class="btn btn-primary">
+            Explore Features
+          </a>
+          <a href="/about" class="btn btn-secondary">
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="text-gray-900 mb-4">Why Choose This Template?</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Everything you need to build fast, modern websites without the bloat.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="card text-center">
+          <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="text-xl mb-2">Lightning Fast</h3>
+          <p class="text-gray-600">
+            Static site generation means your site loads instantly. No server delays, no database queries.
+          </p>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="card text-center">
+          <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+            </svg>
+          </div>
+          <h3 class="text-xl mb-2">Simple Setup</h3>
+          <p class="text-gray-600">
+            One container, minimal configuration. Deploy in minutes with our GitOps workflow.
+          </p>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="card text-center">
+          <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+            </svg>
+          </div>
+          <h3 class="text-xl mb-2">Flexible</h3>
+          <p class="text-gray-600">
+            Use React, Vue, or Svelte components via islands. Add interactivity where you need it.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Use Cases Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="text-gray-900 mb-4">Perfect For</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          This template works great for a variety of projects.
+        </p>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg p-6 border border-gray-100">
+          <h4 class="font-semibold text-gray-900 mb-2">Blogs</h4>
+          <p class="text-sm text-gray-600">Content collections with MDX support</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border border-gray-100">
+          <h4 class="font-semibold text-gray-900 mb-2">Portfolios</h4>
+          <p class="text-sm text-gray-600">Showcase your work beautifully</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border border-gray-100">
+          <h4 class="font-semibold text-gray-900 mb-2">Landing Pages</h4>
+          <p class="text-sm text-gray-600">Marketing and product pages</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 border border-gray-100">
+          <h4 class="font-semibold text-gray-900 mb-2">Web Games</h4>
+          <p class="text-sm text-gray-600">Static HTML/JS games and apps</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section id="contact" class="py-20">
+    <div class="container">
+      <div class="max-w-2xl mx-auto text-center">
+        <h2 class="text-gray-900 mb-4">Ready to Get Started?</h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Clone the template, customize it, and deploy. It's that simple.
+        </p>
+        <a href="https://github.com/logentica/simple-template" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

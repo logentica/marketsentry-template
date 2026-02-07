@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About - Simple Site" description="Learn more about the Simple Site template">
+  <section class="py-20">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-gray-900 mb-6">About This Template</h1>
+        
+        <div class="prose prose-lg max-w-none">
+          <p class="text-xl text-gray-600 mb-8">
+            Simple Site is a lightweight, fast website template built with Astro and Tailwind CSS. 
+            It's designed for projects that don't need user authentication, databases, or complex backend logic.
+          </p>
+          
+          <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Technology Stack</h2>
+          <ul class="space-y-3 text-gray-600">
+            <li class="flex items-start gap-3">
+              <span class="text-primary-600 font-semibold">Astro 5</span>
+              <span>- Static site generation with island architecture for partial hydration</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary-600 font-semibold">Tailwind CSS</span>
+              <span>- Utility-first CSS framework for rapid styling</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary-600 font-semibold">React</span>
+              <span>- Use React components where you need interactivity</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-primary-600 font-semibold">TypeScript</span>
+              <span>- Type safety throughout the project</span>
+            </li>
+          </ul>
+          
+          <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">Deployment</h2>
+          <p class="text-gray-600 mb-4">
+            This template deploys as a single nginx container serving static files. The build process:
+          </p>
+          <ol class="list-decimal list-inside space-y-2 text-gray-600 ml-4">
+            <li>Runs <code class="bg-gray-100 px-2 py-1 rounded">npm run build</code> to generate static files</li>
+            <li>Packages files into an nginx container</li>
+            <li>Pushes to the container registry</li>
+            <li>ArgoCD deploys to Kubernetes</li>
+          </ol>
+          
+          <h2 class="text-2xl font-semibold text-gray-900 mt-12 mb-4">When to Use This Template</h2>
+          <div class="grid md:grid-cols-2 gap-8 mt-6">
+            <div class="bg-green-50 rounded-lg p-6">
+              <h3 class="font-semibold text-green-900 mb-3">Good For</h3>
+              <ul class="space-y-2 text-green-800 text-sm">
+                <li>Blogs and documentation</li>
+                <li>Portfolio websites</li>
+                <li>Landing pages</li>
+                <li>Static web apps and games</li>
+                <li>Marketing sites</li>
+                <li>Event websites</li>
+              </ul>
+            </div>
+            <div class="bg-red-50 rounded-lg p-6">
+              <h3 class="font-semibold text-red-900 mb-3">Not For</h3>
+              <ul class="space-y-2 text-red-800 text-sm">
+                <li>User authentication</li>
+                <li>Database-backed apps</li>
+                <li>Payment processing</li>
+                <li>Real-time features</li>
+                <li>SaaS applications</li>
+              </ul>
+            </div>
+          </div>
+          <p class="text-gray-600 mt-6">
+            If you need those features, check out the <strong>opensaas-template</strong> instead.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

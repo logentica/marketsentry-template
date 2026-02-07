@@ -1,0 +1,47 @@
+# Simple Template - Tenant Configuration
+# Update these values when creating a new site from this template
+
+# Namespace for the deployment (usually same as site name)
+namespace: simple-template
+
+# Site metadata
+site:
+  name: "simple-template"
+  description: "A simple static website"
+
+# Container image
+image:
+  repository: "registry.buildville.cloud/buildville/simple-template"
+  tag: "1"
+  pullPolicy: Always
+
+# Service configuration
+service:
+  port: 80
+
+# Resource limits (adjust based on traffic expectations)
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 50m
+    memory: 64Mi
+
+# Ingress configuration
+ingress:
+  enabled: true
+  className: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  hosts:
+    - host: "simple-template.buildville.cloud"
+  tls:
+    enabled: true
+
+# Health check configuration
+healthCheck:
+  path: /health
+  initialDelaySeconds: 5
+  periodSeconds: 10
