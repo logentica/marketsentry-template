@@ -39,7 +39,7 @@ jobs:
       - name: Extract config from values.yaml
         id: config
         run: |
-          IMAGE_REPO=$(yq '.image.repository' values.yaml)
+          IMAGE_REPO="${REGISTRY}/buildville/${{ secrets.TENANT_NAME }}"
           CURRENT_TAG=$(yq '.image.tag' values.yaml)
           SITE_NAME=$(yq '.site.name' values.yaml)
           HOSTNAME=$(yq '.ingress.hosts[0].host' values.yaml)
