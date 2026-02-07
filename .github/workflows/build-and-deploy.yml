@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 
 env:
-  REGISTRY: registry.buildville.cloud
+  REGISTRY: ${{ secrets.BUILDVILLE_REGISTRY_URL }}
   NODE_VERSION: '22'
 
 jobs:
@@ -64,8 +64,8 @@ jobs:
         uses: docker/login-action@v3
         with:
           registry: ${{ env.REGISTRY }}
-          username: ${{ secrets.HARBOR_USERNAME }}
-          password: ${{ secrets.HARBOR_PASSWORD }}
+          username: ${{ secrets.BUILDVILLE_REGISTRY_USERNAME }}
+          password: ${{ secrets.BUILDVILLE_REGISTRY_PASSWORD }}
 
       - name: Build and push Docker image
         run: |
