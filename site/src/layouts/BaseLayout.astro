@@ -20,8 +20,22 @@ const { title, description = 'A simple, fast website built with Astro' } = Astro
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- Plausible Analytics (update data-domain for your site) -->
-    <script is:inline defer data-domain="simple-template.buildville.cloud" src="https://plausible.buildville.cloud/js/script.js"></script>
+    <!-- Plausible Analytics (auto-instrument per-tenant hostname) -->
+    <script is:inline>
+      (function () {
+        try {
+          var domain = window.location && window.location.hostname ? window.location.hostname : '';
+          if (!domain) return;
+          var s = document.createElement('script');
+          s.defer = true;
+          s.setAttribute('data-domain', domain);
+          s.src = 'https://plausible.buildville.cloud/js/script.js';
+          document.head.appendChild(s);
+        } catch (e) {
+          // no-op
+        }
+      })();
+    </script>
     
     <title>{title}</title>
     
