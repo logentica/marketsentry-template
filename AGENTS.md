@@ -57,6 +57,26 @@ simple-template/
 
 ---
 
+## REQUIRED WORKFLOW (Buildville)
+
+You MUST follow this order for any change request:
+
+1) Create/Update `SPEC.md` first
+   - A detailed spec: goals, non-goals, user stories, UX notes, architecture notes, data model, APIs, edge cases,
+     rollout plan, verification plan.
+   - Do NOT change code in this step.
+
+2) Generate `TODOS.md` second (derived from `SPEC.md`)
+   - A checklist broken into small, verifiable tasks.
+   - Each todo must reference the relevant section(s) in `SPEC.md`.
+   - Do NOT change code in this step.
+
+3) Only then implement code changes
+   - Keep commits aligned to `TODOS.md`.
+   - Update `TODOS.md` as items complete.
+
+---
+
 ## Making Changes
 
 ### Adding a New Page
