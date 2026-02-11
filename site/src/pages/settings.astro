@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="MarketSentry — Settings (Demo)">
+  <section class="py-10 lg:py-14">
+    <div class="container">
+      <div class="mb-8">
+        <h1 class="text-gray-900">Settings</h1>
+        <p class="text-lg text-gray-600 max-w-3xl">
+          This is a demo configuration page. Fields are not wired to real integrations.
+          The goal is to look and feel like a real bot tenant UI.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 space-y-6">
+          <div class="card">
+            <h2 class="text-xl text-gray-900 mb-1">Connections</h2>
+            <p class="text-sm text-gray-600 mb-6">Configure external connectors (simulated in demo).</p>
+
+            <div class="grid md:grid-cols-2 gap-4">
+              <label class="block">
+                <span class="text-sm font-medium text-gray-700">Discord Bot Token</span>
+                <input class="mt-2 w-full rounded border border-gray-200 px-3 py-2" type="password" value="••••••••••••••" />
+              </label>
+              <label class="block">
+                <span class="text-sm font-medium text-gray-700">Discord Channel ID</span>
+                <input class="mt-2 w-full rounded border border-gray-200 px-3 py-2" type="text" placeholder="e.g. 1234567890" />
+              </label>
+              <label class="block">
+                <span class="text-sm font-medium text-gray-700">Polymarket API Key</span>
+                <input class="mt-2 w-full rounded border border-gray-200 px-3 py-2" type="password" value="••••••••••••••" />
+              </label>
+              <label class="block">
+                <span class="text-sm font-medium text-gray-700">Environment</span>
+                <select class="mt-2 w-full rounded border border-gray-200 px-3 py-2">
+                  <option selected>Demo (simulated)</option>
+                  <option>Production</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <button class="btn btn-secondary text-sm" type="button">Test Discord</button>
+              <button class="btn btn-secondary text-sm" type="button">Test Polymarket</button>
+              <button class="btn btn-primary text-sm" type="button">Save Changes</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="text-xl text-gray-900 mb-1">Strategy</h2>
+            <p class="text-sm text-gray-600 mb-6">Set alert triggers and watchlists.</p>
+
+            <div class="grid md:grid-cols-2 gap-4">
+              <label class="block">
+                <span class="text-sm font-medium text-gray-700">Mode</span>
+                <select class="mt-2 w-full rounded border border-gray-200 px-3 py-2">
+                  <option selected>Alerts</option>
+                  <option disabled>Trading (disabled in demo)</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="text-sm font-medium text-gray-700">Schedule</span>
+                <select class="mt-2 w-full rounded border border-gray-200 px-3 py-2">
+                  <option>Every 30 seconds</option>
+                  <option selected>Every 2 minutes</option>
+                  <option>Every 5 minutes</option>
+                  <option>Every 15 minutes</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="text-sm font-medium text-gray-700">Odds change threshold</span>
+                <input class="mt-2 w-full rounded border border-gray-200 px-3 py-2" type="number" value="2" />
+                <span class="text-xs text-gray-500">Percent change to trigger an alert.</span>
+              </label>
+              <label class="block">
+                <span class="text-sm font-medium text-gray-700">Cooldown</span>
+                <select class="mt-2 w-full rounded border border-gray-200 px-3 py-2">
+                  <option>5 minutes</option>
+                  <option selected>30 minutes</option>
+                  <option>2 hours</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="block mt-4">
+              <span class="text-sm font-medium text-gray-700">Watchlist (markets or keywords)</span>
+              <textarea class="mt-2 w-full rounded border border-gray-200 px-3 py-2" rows="4" placeholder="e.g. election, recession, btc, fed"></textarea>
+            </label>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <button class="btn btn-secondary text-sm" type="button">Run Now (Dry Run)</button>
+              <button class="btn btn-primary text-sm" type="button">Save Strategy</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2 class="text-xl text-gray-900 mb-1">Trading (Demo-only)</h2>
+            <p class="text-sm text-gray-600 mb-6">
+              Trading controls are shown to illustrate capability, but are disabled in the demo.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-4 opacity-70">
+              <label class="block">
+                <span class="text-sm font-medium text-gray-700">Enable trading</span>
+                <select class="mt-2 w-full rounded border border-gray-200 px-3 py-2" disabled>
+                  <option selected>Disabled</option>
+                  <option>Enabled</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="text-sm font-medium text-gray-700">Max bet</span>
+                <input class="mt-2 w-full rounded border border-gray-200 px-3 py-2" type="number" value="25" disabled />
+              </label>
+              <label class="block">
+                <span class="text-sm font-medium text-gray-700">Max exposure/day</span>
+                <input class="mt-2 w-full rounded border border-gray-200 px-3 py-2" type="number" value="100" disabled />
+              </label>
+            </div>
+
+            <div class="mt-6 flex flex-wrap gap-3">
+              <button class="btn btn-secondary text-sm" type="button" disabled>Dry Run Trade</button>
+              <button class="btn btn-primary text-sm" type="button" disabled>Save Trading Settings</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="space-y-6">
+          <div class="card">
+            <h3 class="text-lg text-gray-900">Demo Notes</h3>
+            <ul class="mt-4 text-sm text-gray-600 space-y-2 list-disc pl-5">
+              <li>No real Discord is configured.</li>
+              <li>No trades can execute.</li>
+              <li>Logs are simulated to validate the UX.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3 class="text-lg text-gray-900">Quick Actions</h3>
+            <div class="mt-4 flex flex-col gap-3">
+              <a class="btn btn-secondary text-sm" href="/logs">View Logs</a>
+              <a class="btn btn-secondary text-sm" href="/">Back to Dashboard</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
