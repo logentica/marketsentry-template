@@ -2,8 +2,12 @@ namespace: simple-template
 site:
   name: simple-template
   description: A simple static website
+# Static tenant deployment
+services:
+  mode: single
+
 image:
-  repository: registry.buildville.cloud/buildville/simple-template
+  repository: registry.buildville.cloud/buildville/marketsentry-template
   tag: '1'
   pullPolicy: Always
 service:
@@ -26,6 +30,6 @@ ingress:
   tls:
     enabled: true
 healthCheck:
-  path: /health
+  path: /
   initialDelaySeconds: 5
   periodSeconds: 10
